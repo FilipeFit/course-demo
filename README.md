@@ -83,4 +83,3 @@ Also if it's require we can build integration test using RestAsured framework
 Hope that show a little of my skillset and you guys enjoy the application :)
 
 
-
