@@ -25,7 +25,9 @@ application itself
 OBS: If you need to change any ports or global configurations of the application just change de application.properties fi
 
 ## Third Step 
-Use docker-compose up to run the application and mogodb as well and that's it the application is running 
+Build the application sugin maven to generate th jar file "mvn clean install" 
+Build the application container using the command "docker build -f Dockerfile -t schoology ."
+Use the command "docker-compose up" to run the application and mogodb as well and that's it the application is running 
 
 ## API Usage
 The Application is to expose a CRUD API to manage courses like explained bellow
