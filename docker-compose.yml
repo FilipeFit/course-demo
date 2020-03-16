@@ -1,0 +1,28 @@
+version: '3.0'
+
+services:
+  mongo:
+    container_name: docker_mongo
+    networks:
+      - gateway
+    ports:
+      - "27017:27017"
+    hostname: mongo
+    image: mongo:latest
+    volumes:
+      - ./data/db:/data/schoology
+
+  schoology:
+    container_name: schoology
+    networks:
+      - gateway
+    ports:
+      - "8080:8080"
+    hostname: schoology
+    depends_on:
+      - mongo
+    image: schoology
+
+networks:
+  gateway:
+    driver: "bridge"
